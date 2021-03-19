@@ -5,6 +5,8 @@ public class GroundTile : MonoBehaviour
     GroundSpawner groundSpawner;
     [SerializeField] GameObject obstaclePrefab;
     [SerializeField] GameObject coinPrefab;
+    [SerializeField] GameObject tallObstaclePrefab;
+    [SerializeField] float tallObstacleChance = 0.2f;   // want player cannot jump tall obstacle
 
 
 
@@ -26,13 +28,22 @@ public class GroundTile : MonoBehaviour
     
 
     public void SpawnObstacle()
+
     {
+
+        //Choose which obstacle to spawn
+        GameObject obstacleToSpawn = obstaclePrefab;
+        float random = Random.Range(0f, 1f);
+        if (random<tallObstacleChance)
+        {
+            obstacleToSpawn = tallObstaclePrefab;
+        }
         //choose a random point to spawn obstacles
         int obstacleSpawnIndex = Random.Range(2, 5);    // get number from 2 to 4 inclusive, cuz our obstacle objects are child 2-4 in GroundTile
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
 
         //spawn the obstacle at the position
-        Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);     // add "transform" at the end to set its parent, destroy tile along with obstacles
+        Instantiate(obstacleToSpawn, spawnPoint.position, Quaternion.identity, transform);     // add "transform" at the end to set its parent, destroy tile along with obstacles
 
     }
 

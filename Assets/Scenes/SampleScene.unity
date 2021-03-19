@@ -249,6 +249,10 @@ MonoBehaviour:
   rb: {fileID: 174056989}
   horizontalMultipler: 1.7
   speedIncreasePerPoint: 0.1
+  jumpForce: 600
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &240878632
 GameObject:
   m_ObjectHideFlags: 0
