@@ -17,6 +17,8 @@ public class GroundSpawner : MonoBehaviour
         nextSpawnPoint = temp.transform.GetChild(1).transform.position;             // GroundTile has 2 children, Plane and NextSpawnPoint
                                                                                     // we want the second child
 
+        //temp.GetComponent<GroundTile>().SpawnWall();
+
         if (spawnItems)
         {
             temp.GetComponent<GroundTile>().SpawnObstacle();
