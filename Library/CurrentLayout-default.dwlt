@@ -96,6 +96,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1266
     height: 566
   m_MinSize: {x: 782, y: 492}
@@ -103,6 +104,15 @@ MonoBehaviour:
   vertical: 1
   controlID: 78
 --- !u!114 &5
+=======
+    width: 1280
+    height: 588
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 12004, y: 14042}
+  vertical: 1
+  controlID: 53
+--- !u!114 &4
+>>>>>>> parent of 1d6b039... import assets
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,6 +133,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1266
     height: 295
   m_MinSize: {x: 782, y: 221}
@@ -130,6 +141,15 @@ MonoBehaviour:
   vertical: 0
   controlID: 79
 --- !u!114 &6
+=======
+    width: 1280
+    height: 317
+  m_MinSize: {x: 679, y: 221}
+  m_MaxSize: {x: 12004, y: 4021}
+  vertical: 0
+  controlID: 54
+--- !u!114 &5
+>>>>>>> parent of 1d6b039... import assets
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,11 +166,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 989
     y: 0
+<<<<<<< HEAD
     width: 277
     height: 295
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
+=======
+    width: 276
+    height: 317
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 15}
+>>>>>>> parent of 1d6b039... import assets
   m_Panes:
   - {fileID: 16}
   - {fileID: 13}
@@ -173,11 +201,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 224
     height: 295
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
+=======
+    width: 201
+    height: 317
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
+>>>>>>> parent of 1d6b039... import assets
   m_Panes:
   - {fileID: 17}
   m_Selected: 0
@@ -264,6 +300,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 224
     y: 0
     width: 428
@@ -277,6 +314,22 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &12
+=======
+    x: 201
+    y: 0
+    width: 803
+    height: 317
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  - {fileID: 13}
+  - {fileID: 11}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &11
+>>>>>>> parent of 1d6b039... import assets
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,10 +350,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 659.3334
     y: 86.66667
     width: 335
     height: 274
+=======
+    x: 201.33334
+    y: 72.66667
+    width: 801
+    height: 296
+>>>>>>> parent of 1d6b039... import assets
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -310,7 +370,11 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
   m_TargetSize: {x: 502.5, y: 379.5}
+=======
+  m_TargetSize: {x: 1201.5, y: 412.5}
+>>>>>>> parent of 1d6b039... import assets
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -325,10 +389,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -167.5
     m_HBaseRangeMax: 167.5
     m_VBaseRangeMin: -126.5
     m_VBaseRangeMax: 126.5
+=======
+    m_HBaseRangeMin: -400.5
+    m_HBaseRangeMax: 400.5
+    m_VBaseRangeMin: -137.5
+    m_VBaseRangeMax: 137.5
+>>>>>>> parent of 1d6b039... import assets
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -346,16 +417,24 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
       width: 335
       height: 253
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 167.5, y: 126.5}
+=======
+      width: 801
+      height: 275
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 400.5, y: 137.5}
+>>>>>>> parent of 1d6b039... import assets
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -167.5
       y: -126.5
       width: 335
@@ -363,6 +442,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 502.5, y: 411}
+=======
+      x: -400.5
+      y: -137.5
+      width: 801
+      height: 275
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1201.5, y: 444}
+>>>>>>> parent of 1d6b039... import assets
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -422,9 +510,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 231.33334
+    x: 201.33334
     y: 72.66667
-    width: 771
+    width: 801
     height: 296
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &15
@@ -477,9 +565,15 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 7c380000
     m_LastClickedID: 14460
     m_ExpandedIDs: 000000006e38000070380000
+=======
+    m_SelectedIDs: b8340000
+    m_LastClickedID: 13496
+    m_ExpandedIDs: 00000000b0340000
+>>>>>>> parent of 1d6b039... import assets
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -495,7 +589,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 2}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -507,7 +601,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000006e38000070380000
+=======
+    m_ExpandedIDs: 00000000b0340000
+>>>>>>> parent of 1d6b039... import assets
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -562,8 +660,13 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
+<<<<<<< HEAD
   m_DirectoriesAreaWidth: 110
 --- !u!114 &16
+=======
+  m_DirectoriesAreaWidth: 143
+--- !u!114 &15
+>>>>>>> parent of 1d6b039... import assets
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -622,17 +725,30 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 7.3333335
     y: 86.66667
     width: 223
     height: 274
+=======
+    x: 0
+    y: 72.66667
+    width: 200
+    height: 296
+>>>>>>> parent of 1d6b039... import assets
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: fecbffff
       m_LastClickedID: -13314
       m_ExpandedIDs: f4caffff0accffff5e390000
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: aa1ffbff389000003c900000
+>>>>>>> parent of 1d6b039... import assets
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -677,10 +793,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 231.33334
     y: 86.66667
     width: 426
     height: 274
+=======
+    x: 201.33334
+    y: 72.66667
+    width: 801
+    height: 296
+>>>>>>> parent of 1d6b039... import assets
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cbec2bdabd548304db6a1cab00bb010e
@@ -692,9 +815,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 5.896, y: -1.55, z: 3.035}
     speed: 2
     m_Value: {x: 5.896, y: -1.55, z: 3.035}
+=======
+    m_Target: {x: 0, y: -2, z: 5}
+    speed: 2
+    m_Value: {x: 0, y: -2, z: 5}
+>>>>>>> parent of 1d6b039... import assets
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -740,6 +869,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: 0.14204477, y: 0.77087146, z: -0.18383971, w: 0.5935857}
     speed: 2
     m_Value: {x: 0.14200497, y: 0.77065545, z: -0.1837882, w: 0.59341943}
@@ -747,6 +877,15 @@ MonoBehaviour:
     m_Target: 7.93764
     speed: 2
     m_Value: 7.93764
+=======
+    m_Target: {x: 0.0060857977, y: -0.97475314, z: 0.22197321, w: 0.028000338}
+    speed: 2
+    m_Value: {x: 0.0061270455, y: -0.97430366, z: 0.22340861, w: 0.027987868}
+  m_Size:
+    m_Target: 7.145338
+    speed: 2
+    m_Value: 7.4820294
+>>>>>>> parent of 1d6b039... import assets
   m_Ortho:
     m_Target: 0
     speed: 2
