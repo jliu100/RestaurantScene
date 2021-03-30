@@ -7,8 +7,7 @@ public class GroundTile : MonoBehaviour
     [SerializeField] GameObject coinPrefab;
     [SerializeField] GameObject tallObstaclePrefab;
     [SerializeField] float tallObstacleChance = 0.2f;   // want player cannot jump tall obstacle
-    //[SerializeField] GameObject kitckenPrefab;
-    
+
 
 
     // Start is called before the first frame update
@@ -22,7 +21,6 @@ public class GroundTile : MonoBehaviour
     {
         groundSpawner.SpawnTile(true);
         Destroy(gameObject, 2);           // destroy the object after 2 secs after the player leave trigger
-
     }
    
   
@@ -47,14 +45,8 @@ public class GroundTile : MonoBehaviour
         Instantiate(obstacleToSpawn, spawnPoint.position, Quaternion.identity, transform);     // add "transform" at the end to set its parent, destroy tile along with obstacles
 
     }
-    public void SpawnKitechAsset()
-    {
-        //Transform spawnPoint = transform.GetChild(5).transform;
-        //Instantiate(kitckenPrefab, spawnPoint.position, Quaternion.identity, transform);
-        Debug.Log(11);
-    }
 
-
+    
 
     public void SpawnCoins()
     {
