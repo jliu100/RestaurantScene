@@ -7,6 +7,7 @@ public class GroundTile : MonoBehaviour
     [SerializeField] GameObject coinPrefab;
     [SerializeField] GameObject tallObstaclePrefab;
     [SerializeField] GameObject kitchenPrefab;
+    [SerializeField] GameObject emptyPrefab;
     [SerializeField] float tallObstacleChance = 0.2f;   // want player cannot jump tall obstacle
 
 
@@ -52,6 +53,12 @@ public class GroundTile : MonoBehaviour
         Transform spawnPoint = transform.GetChild(5).transform;
         
         Instantiate(kitchenPrefab, spawnPoint.position, Quaternion.identity, transform);
+    }
+    public void SpawnEmptyAssets()
+    {
+        Transform spawnPoint = transform.GetChild(6).transform;
+
+        Instantiate(emptyPrefab, spawnPoint.position, Quaternion.identity, transform);
     }
 
     public void SpawnCoins()
