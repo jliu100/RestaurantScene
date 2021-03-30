@@ -6,7 +6,6 @@ public class GroundTile : MonoBehaviour
     [SerializeField] GameObject obstaclePrefab;
     [SerializeField] GameObject coinPrefab;
     [SerializeField] GameObject tallObstaclePrefab;
-    [SerializeField] GameObject wallPrefab;
     [SerializeField] float tallObstacleChance = 0.2f;   // want player cannot jump tall obstacle
 
 
@@ -24,12 +23,7 @@ public class GroundTile : MonoBehaviour
         Destroy(gameObject, 2);           // destroy the object after 2 secs after the player leave trigger
     }
    
-   // public void SpawnWall()
-   // {
-     //   Transform spawnPoint = transform.GetChild(5).transform;
-       // Instantiate(wallPrefab, spawnPoint.position, Quaternion.identity, transform);
-    //}
-   
+  
     
 
     public void SpawnObstacle()

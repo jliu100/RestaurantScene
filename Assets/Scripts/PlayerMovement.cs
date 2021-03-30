@@ -46,8 +46,12 @@ public class PlayerMovement : MonoBehaviour
         //If palyer's verticle position (not on tile) is less than negative 5, kill palyer
         if (transform.position.y < -5)
         {
-            Die();     
+           Die();     
         }
+           // if (transform.position.y < -5)
+            //{
+              //  transform.position = new Vector3(Mathf.Clamp(transform.position.x, -3f, transform.position.z), 0);
+            //}
     }
 
     public void Die()
