@@ -4,6 +4,7 @@ public class GroundSpawner : MonoBehaviour
 {
     [SerializeField] GameObject groundTile;
     Vector3 nextSpawnPoint;
+    private float nextActionTime = 0.0f;
 
 
     public void SpawnTile(bool spawnItems)
@@ -16,7 +17,10 @@ public class GroundSpawner : MonoBehaviour
 
         nextSpawnPoint = temp.transform.GetChild(1).transform.position;             // GroundTile has 2 children, Plane and NextSpawnPoint
                                                                                     // we want the second child
-
+       
+        temp.GetComponent<GroundTile>().SpawnAssets();
+           
+        
         
 
         if (spawnItems)
