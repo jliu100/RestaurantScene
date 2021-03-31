@@ -23,27 +23,24 @@ public class GroundSpawner : MonoBehaviour
         int assetType = Random.Range(0, 5);
 
         if (assetType == 3)
-        {
-            temp.GetComponent<GroundTile>().SpawnAssets();
-          
-           
-        }
+            temp.GetComponent<GroundTile>().SpawnAssets(); 
         else
-        {
             temp.GetComponent<GroundTile>().SpawnEmptyAssets();
-        }
             
-        
-           
-        
         
 
         if (spawnItems)
         {
-            temp.GetComponent<GroundTile>().SpawnObstacle();
+
             temp.GetComponent<GroundTile>().SpawnCoins();
 
         }
+        if (spawnItems && GameManager.score > 2)
+        {
+            temp.GetComponent<GroundTile>().SpawnObstacle();
+            
+        }
+        
     }
     // Start is called before the first frame update
     void Start()

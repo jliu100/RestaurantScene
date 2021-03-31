@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    int score;
+    public static int score;
     public static GameManager inst;
     [SerializeField] Text scoreText;
     [SerializeField] PlayerMovement playerMovement;
@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     {
         inst = this;
     }
+    
     // Start is called before the first frame update
     void Start()
     {
