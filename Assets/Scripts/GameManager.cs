@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: "+ score;
 
         //increase player's speed
-        playerMovement.speed += playerMovement.speedIncreasePerPoint;
+        //playerMovement.speed += playerMovement.speedIncreasePerPoint;
     }
 
     //This start before anything event start of game

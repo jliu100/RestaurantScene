@@ -9,7 +9,17 @@ public class GroundTile : MonoBehaviour
     [SerializeField] GameObject kitchenPrefab;
     [SerializeField] GameObject emptyPrefab;
     [SerializeField] float tallObstacleChance = 0.2f;   // want player cannot jump tall obstacle
-
+    [SerializeField] GameObject beerBottle;
+    [SerializeField] GameObject cerealBox;
+    [SerializeField] GameObject enegryCan;
+    [SerializeField] GameObject glass;
+    [SerializeField] GameObject juiceBox;
+    [SerializeField] GameObject knife;
+    [SerializeField] GameObject plasticSpoon;
+    [SerializeField] GameObject rottenCheese;
+    [SerializeField] GameObject rottenMeat;
+    [SerializeField] GameObject sodaCan;
+    [SerializeField] GameObject tomatoHead;
 
 
     // Start is called before the first frame update
@@ -63,11 +73,35 @@ public class GroundTile : MonoBehaviour
 
     public void SpawnCoins()
     {
-        int coinsToSpawn = 3;
-        for(int i =0; i<coinsToSpawn; i++)
+        int coinsToSpawn = 1;
+        for(int i =0; i< coinsToSpawn; i++)
         {
-            GameObject temp = Instantiate(coinPrefab, transform);
-            temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
+            GameObject temp;
+            int objectSpawn = Random.Range(0, 13);
+            if (objectSpawn == 0)
+                temp = Instantiate(beerBottle, transform);
+            else if (objectSpawn == 1)
+                temp = Instantiate(cerealBox, transform);
+            else if (objectSpawn == 2)
+                temp = Instantiate(enegryCan, transform);
+            else if (objectSpawn == 3)
+                temp = Instantiate(glass, transform);
+            else if (objectSpawn == 4)
+                temp = Instantiate(juiceBox, transform);
+            else if (objectSpawn == 5)
+                temp = Instantiate(knife, transform);
+            else if (objectSpawn == 6)
+                temp = Instantiate(plasticSpoon, transform);
+            else if (objectSpawn == 7)
+                temp = Instantiate(rottenCheese, transform);
+            else if (objectSpawn == 8)
+                temp = Instantiate(rottenMeat, transform);
+            else if (objectSpawn == 9)
+                temp = Instantiate(sodaCan, transform);
+            else
+                temp = Instantiate(tomatoHead, transform);
+
+             temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
         }
     }
 

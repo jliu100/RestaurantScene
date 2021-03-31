@@ -645,6 +645,25 @@ MonoBehaviour:
   emptyPrefab: {fileID: 2748450763056633004, guid: 20f7de795d22b7f4992dfbbfab13c86f,
     type: 3}
   tallObstacleChance: 0.2
+  beerBottle: {fileID: 5454132761450392266, guid: 9f0de5f28cb4a5a45a4d5ff381f3358c,
+    type: 3}
+  cerealBox: {fileID: 5551301644632038925, guid: c55c327452014ca49afae1d8cb887288,
+    type: 3}
+  enegryCan: {fileID: 2110943815081134608, guid: 89ee1a59008c91742a4aff2686d4b15a,
+    type: 3}
+  glass: {fileID: 5514713660496796779, guid: 07a2a2354b87a384b82132e52695fb92, type: 3}
+  juiceBox: {fileID: 4876861485262297372, guid: 8ad1520d1296a734487359562363265a,
+    type: 3}
+  knife: {fileID: 8403132164853089289, guid: 30b0ece0fbf1dd74b96331e7f1f7f1a8, type: 3}
+  plasticSpoon: {fileID: 238907615648392865, guid: e519fd1d557ab1240a2f4e0f8ab917b2,
+    type: 3}
+  rottenCheese: {fileID: 8170453899597082823, guid: 2600651964978ea4184a8d4e4f248701,
+    type: 3}
+  rottenMeat: {fileID: 3389968230778155911, guid: c3b5afe161b47dd43aeec84aeef15b21,
+    type: 3}
+  sodaCan: {fileID: 6145436979875696875, guid: c138ea2ce26796c4cac1ae9922b95880, type: 3}
+  tomatoHead: {fileID: 8791657172183999507, guid: 5bb460ce14ee80142876784756b37acb,
+    type: 3}
 --- !u!1 &8317632224224032382
 GameObject:
   m_ObjectHideFlags: 0
