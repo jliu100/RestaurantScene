@@ -38,6 +38,7 @@ public class Coin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);  // coin will always rotate 90 degrees every second regardless of framerate
+        //transform.Rotate(0,  rotateSpeed * Time.deltaTime,0);  // coin will always rotate 90 degrees every second regardless of framerate
+       
     }
 }
