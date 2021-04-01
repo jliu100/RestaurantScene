@@ -55,16 +55,7 @@ public class PlayerMovement : MonoBehaviour
     {
         alive = false;
         // restart the game
-        //int i = 0;
-        //foreach (Transform bin in transform)
-        //{
-            //if (i == 1 || i == 0 ) 
-          //     bin.gameObject.SetActive(true);
-         //  else
-         //      bin.gameObject.SetActive(false);
-         //  i++;
-        //}
-        //SceneManager.LoadScene("EndGame");
+        
 
         Invoke("Restart", 3);
     }
