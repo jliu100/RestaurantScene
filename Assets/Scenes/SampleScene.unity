@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971562cdd7533ac44bef8254f70e3715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 6
   rb: {fileID: 174056989}
   horizontalMultipler: 1.7
   speedIncreasePerPoint: 0.1
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vrCamera: {fileID: 963194228}
   toggleAngle: 30
-  speed: 5
+  speed: 6
   moveForward: 0
   rb: {fileID: 174056989}
 --- !u!114 &174056993
