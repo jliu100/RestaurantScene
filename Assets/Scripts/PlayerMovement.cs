@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    bool alive = true;
+    public static bool alive = true;
     
     public float speed = 5;
     [SerializeField] public Rigidbody rb;
@@ -55,15 +55,26 @@ public class PlayerMovement : MonoBehaviour
     {
         alive = false;
         // restart the game
-        
-        Invoke("Restart", 1);
+        //int i = 0;
+        //foreach (Transform bin in transform)
+        //{
+            //if (i == 1 || i == 0 ) 
+          //     bin.gameObject.SetActive(true);
+         //  else
+         //      bin.gameObject.SetActive(false);
+         //  i++;
+        //}
+        //SceneManager.LoadScene("EndGame");
+
+        Invoke("Restart", 3);
     }
 
-    void Restart()
+     void Restart()
     {
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         GameManager.score = 0;
+        alive = true;
     }
 
     void Jump()

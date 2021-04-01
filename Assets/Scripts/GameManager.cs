@@ -8,7 +8,11 @@ public class GameManager : MonoBehaviour
     public static int score;
     public static GameManager inst;
     [SerializeField] Text scoreText;
+    [SerializeField] Button restartButton;
+    [SerializeField] Text endscore;
+    [SerializeField] Text gameOver;
     [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] Text restart;
 
     public void IncreaseScore()
     {
@@ -23,7 +27,10 @@ public class GameManager : MonoBehaviour
     {
         score--;
         scoreText.text = "Score: " + score;
-        
+        if (score < 0)
+        {
+            playerMovement.Die();
+        }
     }
 
     //This start before anything event start of game
@@ -36,11 +43,27 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         
+        restartButton.gameObject.SetActive(false);
+        endscore.gameObject.SetActive(false);
+        restart.gameObject.SetActive(false);
+        gameOver.gameObject.SetActive(false);
+      
+   
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(PlayerMovement.alive == false)
+        {
+            scoreText.gameObject.SetActive(false);
+            //restartButton.gameObject.SetActive(true);
+            endscore.gameObject.SetActive(true);
+            endscore.text = "Your Score: " + score;
+            gameOver.gameObject.SetActive(true);
+            restart.gameObject.SetActive(true);
+            
+            
+        }
     }
 }

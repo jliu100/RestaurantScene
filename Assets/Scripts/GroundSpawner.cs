@@ -10,6 +10,8 @@ public class GroundSpawner : MonoBehaviour
 
     public void SpawnTile(bool spawnItems)
     {
+        if (PlayerMovement.alive == false)
+            return;
         GameObject temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);  //Instantiate is how we spawn (make more) object in unity, 
                                                                                          // first argument is object we wnat to spawn,
                                                                                          //second argument is where we want to spawn

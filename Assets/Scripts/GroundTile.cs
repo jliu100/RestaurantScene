@@ -31,6 +31,8 @@ public class GroundTile : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (PlayerMovement.alive == false)
+            return;
         groundSpawner.SpawnTile(true);
         Destroy(gameObject, 4);           // destroy the object after 2 secs after the player leave trigger
     }

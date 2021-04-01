@@ -9,6 +9,9 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (PlayerMovement.alive == false)
+            return;
+
         if(other.gameObject.GetComponent<Obstacle>() != null)        //To fix some coin spawn inside the obstacles
         {
             Destroy(gameObject);
@@ -24,29 +27,24 @@ public class Coin : MonoBehaviour
         // Add the player's score
 
         bool correct = false;
-
-        Debug.Log(transform.gameObject.name);
    
-        if (other.gameObject.transform.GetChild(1).gameObject.activeSelf && (transform.gameObject.name == "JuicePack_Mid__550_Tris_(Clone)" || transform.gameObject.name == "CerealBox_Mid__400_Tris_(Clone)"))
+        if (other.gameObject.transform.GetChild(2).gameObject.activeSelf && (transform.gameObject.name == "JuicePack_Mid__550_Tris_(Clone)" || transform.gameObject.name == "CerealBox_Mid__400_Tris_(Clone)"))
         {
             correct = true;
-            Debug.Log(true);
         }
-        if (other.gameObject.transform.GetChild(2).gameObject.activeSelf && (transform.gameObject.name == "BeerBottle_Mid__620_Tris_(Clone)" || transform.gameObject.name == "Glass(Clone)"))
+        if (other.gameObject.transform.GetChild(3).gameObject.activeSelf && (transform.gameObject.name == "BeerBottle_Mid__620_Tris_(Clone)" || transform.gameObject.name == "Glass(Clone)"))
         {
             correct = true;
-            Debug.Log(true);
         }
-        if (other.gameObject.transform.GetChild(3).gameObject.activeSelf && (transform.gameObject.name == "Rotten_cheese(Clone)" || transform.gameObject.name == "Rotten_Meat(Clone)" || transform.gameObject.name == "TomatoHead_169_Tris_(Clone)" || transform.gameObject.name == "Plastic Spoon(Clone)"))
+        if (other.gameObject.transform.GetChild(4).gameObject.activeSelf && (transform.gameObject.name == "Rotten_cheese(Clone)" || transform.gameObject.name == "Rotten_Meat(Clone)" || transform.gameObject.name == "TomatoHead_169_Tris_(Clone)" || transform.gameObject.name == "Plastic Spoon(Clone)"))
         {
             correct = true;
-            Debug.Log(true);
         }
-        if (other.gameObject.transform.GetChild(4).gameObject.activeSelf && (transform.gameObject.name == "KnifeKitchen(Clone)" || transform.gameObject.name == "Pan(Clone)"))
+        if (other.gameObject.transform.GetChild(5).gameObject.activeSelf && (transform.gameObject.name == "KnifeKitchen(Clone)" || transform.gameObject.name == "Pan(Clone)"))
         {
             correct = true;
-            Debug.Log(true);
         }
+
         if (correct == false)
         {
             GameManager.inst.DecreaseScore();

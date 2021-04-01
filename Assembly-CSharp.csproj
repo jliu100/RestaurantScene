@@ -178,6 +178,7 @@
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\VRLookWalk.cs" />
+    <Compile Include="Assets\endgame.cs" />
     <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
     <None Include="Assets\Kitchen Asset\README.txt" />
     <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />
