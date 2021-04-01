@@ -54,7 +54,7 @@ public class VRLookWalk : MonoBehaviour
         {
           
             Vector3 point = new Vector3(0,0,1);
-            cc.SimpleMove(point *8); 
+            cc.SimpleMove(point * 9); 
         }
     }
 }

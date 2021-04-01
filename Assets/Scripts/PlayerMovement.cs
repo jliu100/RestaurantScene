@@ -58,12 +58,15 @@ public class PlayerMovement : MonoBehaviour
     {
         alive = false;
         // restart the game
+        
         Invoke("Restart", 1);
     }
 
     void Restart()
     {
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameManager.score = 0;
     }
 
     void Jump()
