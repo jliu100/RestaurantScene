@@ -23,15 +23,39 @@ public class Coin : MonoBehaviour
 
         // Add the player's score
 
-        if(other.gameObject.transform.GetChild(1).gameObject.activeSelf)
+        bool correct = false;
+
+        Debug.Log(transform.gameObject.name);
+   
+        if (other.gameObject.transform.GetChild(1).gameObject.activeSelf && (transform.gameObject.name == "JuicePack_Mid__550_Tris_(Clone)" || transform.gameObject.name == "CerealBox_Mid__400_Tris_(Clone)"))
         {
-            Debug.Log("True 1");
+            correct = true;
+            Debug.Log(true);
         }
-        if (other.gameObject.transform.GetChild(2).gameObject.activeSelf)
+        if (other.gameObject.transform.GetChild(2).gameObject.activeSelf && (transform.gameObject.name == "BeerBottle_Mid__620_Tris_(Clone)" || transform.gameObject.name == "Glass(Clone)"))
         {
-            Debug.Log("True 2");
+            correct = true;
+            Debug.Log(true);
         }
-        GameManager.inst.IncreaseScore();
+        if (other.gameObject.transform.GetChild(3).gameObject.activeSelf && (transform.gameObject.name == "Rotten_cheese(Clone)" || transform.gameObject.name == "Rotten_Meat(Clone)" || transform.gameObject.name == "TomatoHead_169_Tris_(Clone)" || transform.gameObject.name == "Plastic Spoon(Clone)"))
+        {
+            correct = true;
+            Debug.Log(true);
+        }
+        if (other.gameObject.transform.GetChild(4).gameObject.activeSelf && (transform.gameObject.name == "KnifeKitchen(Clone)" || transform.gameObject.name == "Pan(Clone)"))
+        {
+            correct = true;
+            Debug.Log(true);
+        }
+        if (correct == false)
+        {
+            GameManager.inst.DecreaseScore();
+        }
+        else
+        {
+            GameManager.inst.IncreaseScore();
+        }
+        //GameManager.inst.IncreaseScore();
 
         // Destory the coin
         Destroy(gameObject);
