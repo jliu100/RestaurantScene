@@ -47,14 +47,13 @@ public class VRLookWalk : MonoBehaviour
         if (moveForward)
         {
             Vector3 forward = vrCamera.TransformDirection(Vector3.forward);
-
             cc.SimpleMove(forward * speed);
         }
         else
         {
           
             Vector3 point = new Vector3(0,0,1);
-            cc.SimpleMove(point * 9); 
+            cc.SimpleMove(point * 5); 
         }
     }
 }

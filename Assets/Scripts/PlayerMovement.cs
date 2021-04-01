@@ -48,10 +48,7 @@ public class PlayerMovement : MonoBehaviour
         {
            Die();     
         }
-           // if (transform.position.y < -5)
-            //{
-              //  transform.position = new Vector3(Mathf.Clamp(transform.position.x, -3f, transform.position.z), 0);
-            //}
+           
     }
 
     public void Die()

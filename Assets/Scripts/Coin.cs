@@ -23,6 +23,14 @@ public class Coin : MonoBehaviour
 
         // Add the player's score
 
+        if(other.gameObject.transform.GetChild(1).gameObject.activeSelf)
+        {
+            Debug.Log("True 1");
+        }
+        if (other.gameObject.transform.GetChild(2).gameObject.activeSelf)
+        {
+            Debug.Log("True 2");
+        }
         GameManager.inst.IncreaseScore();
 
         // Destory the coin

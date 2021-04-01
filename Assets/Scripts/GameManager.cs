@@ -19,6 +19,13 @@ public class GameManager : MonoBehaviour
         //playerMovement.speed += playerMovement.speedIncreasePerPoint;
     }
 
+    public void DecreaseScore()
+    {
+        score--;
+        scoreText.text = "Score: " + score;
+        
+    }
+
     //This start before anything event start of game
     private void Awake()
     {

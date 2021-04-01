@@ -2,7 +2,7 @@
 
 public class BinSwitch : MonoBehaviour
 {
-    public int selectedBin = 0;
+    public int selectedBin = 1;
     public Transform vrCamera;
 
     // Start is called before the first frame update
@@ -15,17 +15,18 @@ public class BinSwitch : MonoBehaviour
     void Update()
     {
         int previousBin = selectedBin;
-        Debug.Log(vrCamera.eulerAngles);
-        if (vrCamera.eulerAngles.x < 61.0f && vrCamera.eulerAngles.x > 60.0f)
+       
+
+        if (vrCamera.eulerAngles.x < 41.0f && vrCamera.eulerAngles.x > 40.0f)
         {
             if (selectedBin >= transform.childCount - 1)
-                selectedBin = 0;
+                selectedBin = 1;
             else
                 selectedBin++;
         }
         if (vrCamera.eulerAngles.x < 350.0f && vrCamera.eulerAngles.x >345.0f)
         {
-            if (selectedBin <= 0)
+            if (selectedBin <= 1)
                 selectedBin = transform.childCount -1;
             else
                 selectedBin--;
@@ -39,9 +40,10 @@ public class BinSwitch : MonoBehaviour
         int i = 0;
         foreach(Transform bin in transform)
         {
+
             if (i == selectedBin)
                 bin.gameObject.SetActive(true);
-            else if (i == 0)
+            else if (i== 0)
             {
                 bin.gameObject.SetActive(true);
             }
