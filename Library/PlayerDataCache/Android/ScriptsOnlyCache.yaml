@@ -13,7 +13,7 @@ ScriptsOnlyBuild:
     - GvrPointerPhysicsRaycaster
     - GvrReticlePointer
     - Obstacle
-    - PlayerMovement
+    - SoundManager
     - VRLookWalk
     Google.XR.Cardboard.dll:
     - Google.XR.Cardboard.XRLoader
@@ -64,6 +64,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -71,47 +75,47 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11312}
+      Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11314}
+      Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 11316}
+      Script: {instanceID: 11340}
     - Class: 114
-      Script: {instanceID: 11318}
+      Script: {instanceID: 11342}
     - Class: 114
-      Script: {instanceID: 11568}
+      Script: {instanceID: 11596}
     - Class: 114
-      Script: {instanceID: 11580}
+      Script: {instanceID: 11608}
     - Class: 114
-      Script: {instanceID: 11678}
+      Script: {instanceID: 11708}
     - Class: 114
-      Script: {instanceID: 11800}
+      Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 12064}
+      Script: {instanceID: 12100}
     - Class: 114
-      Script: {instanceID: 12186}
+      Script: {instanceID: 12224}
     - Class: 114
-      Script: {instanceID: 12766}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 12936}
+      Script: {instanceID: 12982}
     - Class: 114
-      Script: {instanceID: 12960}
+      Script: {instanceID: 13008}
     - Class: 114
-      Script: {instanceID: 13102}
+      Script: {instanceID: 13152}
     - Class: 114
-      Script: {instanceID: 13148}
+      Script: {instanceID: 13198}
     - Class: 114
-      Script: {instanceID: 13182}
+      Script: {instanceID: 13232}
     - Class: 114
-      Script: {instanceID: 13352}
+      Script: {instanceID: 13366}
     - Class: 114
-      Script: {instanceID: 13490}
+      Script: {instanceID: 13542}
     - Class: 114
-      Script: {instanceID: 13504}
+      Script: {instanceID: 13556}
     - Class: 114
-      Script: {instanceID: 13592}
+      Script: {instanceID: 13644}
     - Class: 114
-      Script: {instanceID: 13604}
+      Script: {instanceID: 13656}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -659,7 +663,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 62b8c089011a38d686a684eb1a89e16c
+      Hash: 83842287132b2b9110bd79188e743de8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BinSwitch
@@ -777,6 +781,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f

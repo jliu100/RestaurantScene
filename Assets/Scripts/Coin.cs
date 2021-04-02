@@ -24,10 +24,7 @@ public class Coin : MonoBehaviour
             return;
         }
 
-        
-
-        
-       Debug.Log(other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.activeSelf);
+       
 
         // Add the player's score
 
@@ -36,18 +33,26 @@ public class Coin : MonoBehaviour
         if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.activeSelf && (transform.gameObject.name == "JuicePack_Mid__550_Tris_(Clone)" || transform.gameObject.name == "CerealBox_Mid__400_Tris_(Clone)"))
         {
             correct = true;
+            Destroy(gameObject);
         }
         else if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject.activeSelf && (transform.gameObject.name == "BeerBottle_Mid__620_Tris_(Clone)" || transform.gameObject.name == "Glass(Clone)"))
         {
             correct = true;
+            Destroy(gameObject);
         }
         else if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.activeSelf && (transform.gameObject.name == "Rotten_cheese(Clone)" || transform.gameObject.name == "Rotten_Meat(Clone)" || transform.gameObject.name == "TomatoHead_169_Tris_(Clone)" || transform.gameObject.name == "Plastic Spoon(Clone)"))
         {
             correct = true;
+            Destroy(gameObject);
         }
         else if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(3).gameObject.activeSelf && (transform.gameObject.name == "KnifeKitchen(Clone)" || transform.gameObject.name == "Pan(Clone)"))
         {
             correct = true;
+            Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
 
         if (correct == true)
@@ -63,7 +68,7 @@ public class Coin : MonoBehaviour
 
 
         // Destory the coin
-        Destroy(gameObject);
+        
 
 
 

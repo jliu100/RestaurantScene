@@ -29,7 +29,13 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
         if (score < 0)
         {
-            playerMovement.Die();
+           
+                PlayerMovement.alive = false;
+                // restart the game
+
+
+                Invoke("Restart", 3);
+            
         }
     }
 
@@ -65,5 +71,11 @@ public class GameManager : MonoBehaviour
             
             
         }
+    }
+
+    void Restart()
+    {
+
+        PlayerMovement.Restart();
     }
 }

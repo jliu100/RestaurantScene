@@ -333,7 +333,6 @@ GameObject:
   - component: {fileID: 174056986}
   - component: {fileID: 174056985}
   - component: {fileID: 174056989}
-  - component: {fileID: 174056990}
   - component: {fileID: 174056991}
   - component: {fileID: 174056992}
   m_Layer: 0
@@ -436,26 +435,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &174056990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 174056984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 971562cdd7533ac44bef8254f70e3715, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
-  rb: {fileID: 174056989}
-  horizontalMultipler: 1.7
-  speedIncreasePerPoint: 0.1
-  jumpForce: 600
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!143 &174056991
 CharacterController:
   m_ObjectHideFlags: 0
@@ -524,7 +503,7 @@ MonoBehaviour:
   restartButton: {fileID: 8999117}
   endscore: {fileID: 617463407}
   gameOver: {fileID: 1948919009}
-  playerMovement: {fileID: 174056990}
+  playerMovement: {fileID: 0}
   restart: {fileID: 395969588}
 --- !u!4 &240878634
 Transform:
@@ -1110,10 +1089,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
+  m_Pitch: 1.2
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1121,7 +1100,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: 0.19
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -1155,7 +1134,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.49
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1170,7 +1149,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.22777778
       inSlope: 0
       outSlope: 0
       tangentMode: 0
