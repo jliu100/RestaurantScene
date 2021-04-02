@@ -53,11 +53,12 @@ public class Coin : MonoBehaviour
         if (correct == true)
         {
             GameManager.inst.IncreaseScore();
-         
+            SoundManager.PlaySound("good");
         }
         else
         {
-            GameManager.inst.DecreaseScore();  
+            GameManager.inst.DecreaseScore();
+            SoundManager.PlaySound("bad");
         }
 
 

@@ -6,18 +6,31 @@ using UnityEngine.UI;
 public class SoundManager : MonoBehaviour
 {
 
-    public AudioClip bcgMusic;
+    public static AudioClip goodSound, badSound;
+    static AudioSource audioSrc;
     // Use this for initialization
     void Start()
     {
-        Debug.Log(bcgMusic.ToString());
+        goodSound = Resources.Load<AudioClip>("good");
+        badSound = Resources.Load<AudioClip>("bad");
 
-        AudioSource.PlayClipAtPoint(bcgMusic, transform.position);
+        audioSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        AudioSource.PlayClipAtPoint(bcgMusic, transform.position);
+       
+    }
+    public static void PlaySound(string clip)
+    {
+        switch (clip){
+            case "good":
+                audioSrc.PlayOneShot(goodSound);
+                break;
+            case "bad":
+                audioSrc.PlayOneShot(badSound);
+                break;
+        }
     }
 }
