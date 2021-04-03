@@ -13,13 +13,16 @@ public class GroundTile : MonoBehaviour
     [SerializeField] GameObject cerealBox;
     [SerializeField] GameObject enegryCan;
     [SerializeField] GameObject glass;
-    [SerializeField] GameObject juiceBox;
+    [SerializeField] GameObject cardbordBox;
     [SerializeField] GameObject knife;
     [SerializeField] GameObject plasticSpoon;
+    [SerializeField] GameObject plasticFork;
+    [SerializeField] GameObject plate;
     [SerializeField] GameObject rottenCheese;
     [SerializeField] GameObject rottenMeat;
-    [SerializeField] GameObject sodaCan;
     [SerializeField] GameObject tomatoHead;
+    [SerializeField] GameObject metalPot;
+
 
 
     // Start is called before the first frame update
@@ -79,7 +82,7 @@ public class GroundTile : MonoBehaviour
         for(int i =0; i< coinsToSpawn; i++)
         {
             GameObject temp;
-            int objectSpawn = Random.Range(0, 13);
+            int objectSpawn = Random.Range(0, 15);
             if (objectSpawn == 0)
                 temp = Instantiate(beerBottle, transform);
             else if (objectSpawn == 1)
@@ -89,7 +92,7 @@ public class GroundTile : MonoBehaviour
             else if (objectSpawn == 3)
                 temp = Instantiate(glass, transform);
             else if (objectSpawn == 4)
-                temp = Instantiate(juiceBox, transform);
+                temp = Instantiate(cardbordBox, transform);
             else if (objectSpawn == 5)
                 temp = Instantiate(knife, transform);
             else if (objectSpawn == 6)
@@ -99,9 +102,16 @@ public class GroundTile : MonoBehaviour
             else if (objectSpawn == 8)
                 temp = Instantiate(rottenMeat, transform);
             else if (objectSpawn == 9)
-                temp = Instantiate(sodaCan, transform);
+                temp = Instantiate(plasticFork, transform);
+            else if (objectSpawn == 10)
+                temp = Instantiate(plate, transform);
+            else if (objectSpawn == 11)
+                temp = Instantiate(metalPot, transform);
             else
                 temp = Instantiate(tomatoHead, transform);
+
+            
+        
 
              temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
         }

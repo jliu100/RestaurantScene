@@ -29,23 +29,24 @@ public class Coin : MonoBehaviour
         // Add the player's score
 
         bool correct = false;
+        Debug.Log(transform.gameObject.name);
 
-        if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.activeSelf && (transform.gameObject.name == "JuicePack_Mid__550_Tris_(Clone)" || transform.gameObject.name == "CerealBox_Mid__400_Tris_(Clone)"))
+        if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.activeSelf && (transform.gameObject.name == "Rotten_cheese(Clone)" || transform.gameObject.name == "Rotten_Meat(Clone)" || transform.gameObject.name == "TomatoHead_169_Tris_(Clone)"))
         {
             correct = true;
             Destroy(gameObject);
         }
-        else if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject.activeSelf && (transform.gameObject.name == "BeerBottle_Mid__620_Tris_(Clone)" || transform.gameObject.name == "Glass(Clone)"))
+        else if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject.activeSelf && (transform.gameObject.name == "CerealBox_Mid__400_Tris_(Clone)" || transform.gameObject.name == "CarboardBox_1(Clone)"))
         {
             correct = true;
             Destroy(gameObject);
         }
-        else if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.activeSelf && (transform.gameObject.name == "Rotten_cheese(Clone)" || transform.gameObject.name == "Rotten_Meat(Clone)" || transform.gameObject.name == "TomatoHead_169_Tris_(Clone)" || transform.gameObject.name == "Plastic Spoon(Clone)"))
+        else if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.activeSelf && (transform.gameObject.name == "Plastic Spoon(Clone)" || transform.gameObject.name == "Plastic Spork(Clone)" || transform.gameObject.name == "Plate3(Clone)"))
         {
             correct = true;
             Destroy(gameObject);
         }
-        else if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(3).gameObject.activeSelf && (transform.gameObject.name == "KnifeKitchen(Clone)" || transform.gameObject.name == "Pan(Clone)"))
+        else if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(3).gameObject.activeSelf && (transform.gameObject.name == "KnifeKitchen(Clone)" || transform.gameObject.name == "Pan(Clone)" || transform.gameObject.name == "EnergyDrink_Mid__226_Tris_(Clone)" || transform.gameObject.name == "Glass(Clone)"  || transform.gameObject.name == "BeerBottle_Mid__620_Tris_(Clone)")  )
         {
             correct = true;
             Destroy(gameObject);
@@ -54,6 +55,10 @@ public class Coin : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        //-------------------------
+
+
+       
 
         if (correct == true)
         {

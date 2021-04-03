@@ -17,7 +17,8 @@ public class Obstacle : MonoBehaviour
         if(collision.gameObject.name == "Player")
         {
             //kill player
-            playerMovement.Die();
+            PlayerMovement.alive = false;
+            Invoke("Restart", 3);
         }
         
     }
@@ -26,5 +27,10 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         
+    }
+    void Restart()
+    {
+
+        PlayerMovement.Restart();
     }
 }

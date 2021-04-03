@@ -191,7 +191,7 @@ PrefabInstance:
     - target: {fileID: 4602025962161850522, guid: 3773d0ae256dc594ea12defa93a67c26,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3773d0ae256dc594ea12defa93a67c26, type: 3}
@@ -685,12 +685,12 @@ PrefabInstance:
     - target: {fileID: 4679945487239155348, guid: c78cd17a5b684e84b9455b4b80d36b8d,
         type: 3}
       propertyPath: m_Name
-      value: TrashbinGreen 1
+      value: TrashbinBlack
       objectReference: {fileID: 0}
     - target: {fileID: 4679945487239155348, guid: c78cd17a5b684e84b9455b4b80d36b8d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8550603381214018695, guid: c78cd17a5b684e84b9455b4b80d36b8d,
         type: 3}
@@ -1734,6 +1734,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrashbinGreen
       objectReference: {fileID: 0}
+    - target: {fileID: 933738511553406173, guid: 1a570f403ac9fbc439ef2f8f8fbaed19,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4228343360813323982, guid: 1a570f403ac9fbc439ef2f8f8fbaed19,
         type: 3}
       propertyPath: m_RootOrder
@@ -1807,7 +1812,7 @@ PrefabInstance:
     - target: {fileID: 703639341689392469, guid: 8d1264d958f92714c81f3d43e933b4b7,
         type: 3}
       propertyPath: m_Name
-      value: TrashbinYellow
+      value: TrashbinOrange
       objectReference: {fileID: 0}
     - target: {fileID: 703639341689392469, guid: 8d1264d958f92714c81f3d43e933b4b7,
         type: 3}

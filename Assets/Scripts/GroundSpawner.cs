@@ -37,8 +37,9 @@ public class GroundSpawner : MonoBehaviour
             temp.GetComponent<GroundTile>().SpawnCoins();
 
         }
-        if (spawnItems && GameManager.score > 2)
+        if (spawnItems && GameManager.score > 1)
         {
+            Debug.Log(11);
             temp.GetComponent<GroundTile>().SpawnObstacle();
             
         }
