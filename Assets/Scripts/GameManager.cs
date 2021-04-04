@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static int score;
+   
     public static GameManager inst;
     [SerializeField] Text scoreText;
     [SerializeField] Button restartButton;
@@ -31,10 +32,10 @@ public class GameManager : MonoBehaviour
         {
            
                 PlayerMovement.alive = false;
-                // restart the game
+            // restart the game
+            GroundSpawner.spawn = false;
 
-
-                Invoke("Restart", 3);
+            Invoke("Restart", 3);
             
         }
     }

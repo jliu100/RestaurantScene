@@ -11,14 +11,17 @@ public class Obstacle : MonoBehaviour
     void Start()
     {
         playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
+       
     }
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.name == "Player")
         {
             //kill player
+           
             PlayerMovement.alive = false;
-            Invoke("Restart", 3);
+            GroundSpawner.spawn = false;
+            Invoke("Restart", 2);
         }
         
     }
@@ -30,7 +33,6 @@ public class Obstacle : MonoBehaviour
     }
     void Restart()
     {
-
         PlayerMovement.Restart();
     }
 }

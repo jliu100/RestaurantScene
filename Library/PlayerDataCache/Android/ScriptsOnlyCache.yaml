@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - GvrPointerPhysicsRaycaster
     - GvrReticlePointer
     - Obstacle
+    - PlayerMovement
     - SoundManager
     - VRLookWalk
     Google.XR.Cardboard.dll:
@@ -108,6 +109,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13232}
     - Class: 114
       Script: {instanceID: 13366}
+    - Class: 114
+      Script: {instanceID: 13404}
     - Class: 114
       Script: {instanceID: 13542}
     - Class: 114
@@ -261,7 +264,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: efbefb8f5cd8e56220a977040b438d50
+      Hash: 48c548893538b60a25ebfb25c547b803
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GroundTile

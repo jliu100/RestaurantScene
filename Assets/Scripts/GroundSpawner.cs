@@ -5,7 +5,7 @@ public class GroundSpawner : MonoBehaviour
     [SerializeField] GameObject groundTile;
     Vector3 nextSpawnPoint;
     private float nextActionTime = 0.0f;
-    private bool change = true;
+    public static bool spawn = false;
 
 
     public void SpawnTile(bool spawnItems)
@@ -37,9 +37,8 @@ public class GroundSpawner : MonoBehaviour
             temp.GetComponent<GroundTile>().SpawnCoins();
 
         }
-        if (spawnItems && GameManager.score > 1)
+        if (spawnItems && spawn == true)
         {
-            Debug.Log(11);
             temp.GetComponent<GroundTile>().SpawnObstacle();
             
         }
@@ -48,11 +47,14 @@ public class GroundSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 30; i++)
         {
             if (i < 3)
             {
                 SpawnTile(false);
+            }else if (i == 15)
+            {
+                spawn = true;
             }
             else
             {
