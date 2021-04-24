@@ -357,15 +357,15 @@ MonoBehaviour:
   GVRClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 979682658}
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SampleScene
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   gvrTimer: 0
@@ -1301,10 +1301,10 @@ GameObject:
   - component: {fileID: 1311239384}
   - component: {fileID: 1311239383}
   - component: {fileID: 1311239382}
-  - component: {fileID: 1311239381}
   - component: {fileID: 1311239380}
+  - component: {fileID: 1311239381}
   m_Layer: 5
-  m_Name: Resturant Scene
+  m_Name: ResturantScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1390,7 +1390,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 979682658}
-        m_MethodName: set_name
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
