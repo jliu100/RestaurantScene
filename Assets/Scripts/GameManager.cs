@@ -9,11 +9,9 @@ public class GameManager : MonoBehaviour
    
     public static GameManager inst;
     [SerializeField] Text scoreText;
-    [SerializeField] Button restartButton;
-    [SerializeField] Text endscore;
-    [SerializeField] Text gameOver;
     [SerializeField] PlayerMovement playerMovement;
-    [SerializeField] Text restart;
+    [SerializeField] GameObject endGame;
+
 
     public void IncreaseScore()
     {
@@ -31,7 +29,9 @@ public class GameManager : MonoBehaviour
         if (score < 0)
         {
            
-                PlayerMovement.alive = false;
+            PlayerMovement.alive = false;
+            endGame.SetActive(true);
+       
             // restart the game
             GroundSpawner.spawn = false;
 
@@ -50,10 +50,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         
-        restartButton.gameObject.SetActive(false);
-        endscore.gameObject.SetActive(false);
-        restart.gameObject.SetActive(false);
-        gameOver.gameObject.SetActive(false);
+      
       
    
     }
@@ -64,11 +61,10 @@ public class GameManager : MonoBehaviour
         if(PlayerMovement.alive == false)
         {
             scoreText.gameObject.SetActive(false);
-            //restartButton.gameObject.SetActive(true);
-            endscore.gameObject.SetActive(true);
-            endscore.text = "Your Score: " + score;
-            gameOver.gameObject.SetActive(true);
-            restart.gameObject.SetActive(true);
+      
+        
+        
+           
             
             
         }
