@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class GameManager : MonoBehaviour
     public static GameManager inst;
     [SerializeField] Text scoreText;
     [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] TextMeshProUGUI totalScore;
     [SerializeField] GameObject endGame;
 
 
@@ -31,12 +34,14 @@ public class GameManager : MonoBehaviour
            
             PlayerMovement.alive = false;
             endGame.SetActive(true);
-       
+            totalScore.text = "Your Score: " + score;
+
             // restart the game
             GroundSpawner.spawn = false;
+            //Invoke("MenuScene", 2);
 
-            Invoke("Restart", 3);
-            
+            Invoke("Restart", 2);
+
         }
     }
 
@@ -49,9 +54,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-      
-      
+         
    
     }
 
@@ -61,12 +64,7 @@ public class GameManager : MonoBehaviour
         if(PlayerMovement.alive == false)
         {
             scoreText.gameObject.SetActive(false);
-      
-        
-        
-           
-            
-            
+
         }
     }
 
@@ -75,4 +73,6 @@ public class GameManager : MonoBehaviour
 
         PlayerMovement.Restart();
     }
+
+   
 }

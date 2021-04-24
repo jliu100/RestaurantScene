@@ -57,13 +57,13 @@ public class PlayerMovement : MonoBehaviour
         // restart the game
         
 
-        Invoke("Restart", 3);
+        Invoke("Restart", 2);
     }
 
      public static void Restart()
     {
        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("MenuScene");
         GameManager.score = 0;
         alive = true;
     }
