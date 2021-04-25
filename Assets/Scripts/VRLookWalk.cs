@@ -14,6 +14,9 @@ public class VRLookWalk : MonoBehaviour
     [SerializeField] public Rigidbody rb;
     private CharacterController cc;
 
+    [SerializeField] LayerMask groundMask;
+    [SerializeField] float jumpForce = 400f;
+
     // Use this for initialization
     void Start()
     {
@@ -44,6 +47,10 @@ public class VRLookWalk : MonoBehaviour
             moveForward = true;
         }
 
+        
+        if(vrCamera.eulerAngles.x <340 && vrCamera.eulerAngles.x>330)
+            Debug.Log("x: " + vrCamera.eulerAngles.x);
+
         if (moveForward)
         {
             Vector3 forward = vrCamera.TransformDirection(Vector3.forward);
@@ -55,5 +62,17 @@ public class VRLookWalk : MonoBehaviour
             Vector3 point = new Vector3(0,0,1);
             cc.SimpleMove(point * 5); 
         }
+    }
+
+    void Jump()
+    {
+        // Check whether we are currently grounded
+        float height = GetComponent<Collider>().bounds.size.y;
+        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
+
+        //If we are jump
+        rb.AddForce(Vector3.up * jumpForce);
+
+
     }
 }
