@@ -44,7 +44,9 @@ public class GameManager : MonoBehaviour
 
         }
     }
-
+   
+   
+    
     //This start before anything event start of game
     private void Awake()
     {
@@ -63,7 +65,8 @@ public class GameManager : MonoBehaviour
     {
         if(PlayerMovement.alive == false)
         {
-            scoreText.gameObject.SetActive(false);
+            endGame.SetActive(true);
+            totalScore.text = "Your Score: " + score;
 
         }
     }

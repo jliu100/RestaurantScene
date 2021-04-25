@@ -7,6 +7,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     PlayerMovement playerMovement;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,8 @@ public class Obstacle : MonoBehaviour
            
             PlayerMovement.alive = false;
             GroundSpawner.spawn = false;
+      
+
             Invoke("Restart", 2);
         }
         

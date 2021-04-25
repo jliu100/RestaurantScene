@@ -372,6 +372,10 @@ MonoBehaviour:
   speed: 6
   moveForward: 0
   rb: {fileID: 174056989}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
+  jumpForce: 600
 --- !u!1 &240878632
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,7 +891,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4a43624bea361164589fc998fbfe9639, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1.2

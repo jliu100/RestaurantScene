@@ -47,14 +47,18 @@ public class VRLookWalk : MonoBehaviour
             moveForward = true;
         }
 
-        
-        if(vrCamera.eulerAngles.x <340 && vrCamera.eulerAngles.x>330)
-            Debug.Log("x: " + vrCamera.eulerAngles.x);
+
+        if (vrCamera.eulerAngles.x < 340 && vrCamera.eulerAngles.x > 330)
+        {
+            Jump();
+            
+        }
 
         if (moveForward)
         {
             Vector3 forward = vrCamera.TransformDirection(Vector3.forward);
             cc.SimpleMove(forward * speed);
+            
         }
         else
         {
@@ -71,7 +75,9 @@ public class VRLookWalk : MonoBehaviour
         bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
 
         //If we are jump
-        rb.AddForce(Vector3.up * jumpForce);
+      
+        cc.Move(Vector3.up * 0.5f);
+
 
 
     }
