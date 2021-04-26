@@ -180,6 +180,7 @@
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\VRLookWalk.cs" />
     <Compile Include="Assets\Scripts\endgame.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

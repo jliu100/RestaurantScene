@@ -70,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
         SceneManager.LoadScene("MenuScene");
         GameManager.score = 0;
         alive = true;
+        Timer.timeValue = 90;
     }
 
     void Jump()

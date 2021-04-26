@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     {
         score--;
         scoreText.text = "Score: " + score;
-        if (score < 0)
+        if (score >10000)
         {
            
             PlayerMovement.alive = false;
@@ -63,11 +63,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerMovement.alive == false)
+        if(PlayerMovement.alive == false || Timer.timeValue == 0)
         {
             endGame.SetActive(true);
             totalScore.text = "Your Score: " + score;
             scoreText.text = "";
+            Invoke("Restart", 2);
 
         }
     }
