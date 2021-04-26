@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] TextMeshProUGUI totalScore;
     [SerializeField] GameObject endGame;
+    [SerializeField] GameObject winGame;
 
 
     public void IncreaseScore()
@@ -29,20 +30,7 @@ public class GameManager : MonoBehaviour
     {
         score--;
         scoreText.text = "Score: " + score;
-        if (score >10000)
-        {
-           
-            PlayerMovement.alive = false;
-            endGame.SetActive(true);
-            totalScore.text = "Your Score: " + score;
-
-            // restart the game
-            GroundSpawner.spawn = false;
-            //Invoke("MenuScene", 2);
-
-            Invoke("Restart", 2);
-
-        }
+        
     }
    
    
@@ -63,9 +51,20 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerMovement.alive == false || Timer.timeValue == 0)
+        if (PlayerMovement.alive == false && Timer.timeValue == 0 && score >= 10)
         {
             endGame.SetActive(true);
+            endGame.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            endGame.gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.SetActive(true);
+            winGame.SetActive(false);
+            totalScore.text = "Your Score: " + score;
+            scoreText.text = "";
+            Invoke("Restart", 2);
+        }
+       else if(PlayerMovement.alive == false)
+        {
+            endGame.SetActive(true);
+            winGame.SetActive(false);
             totalScore.text = "Your Score: " + score;
             scoreText.text = "";
             Invoke("Restart", 2);

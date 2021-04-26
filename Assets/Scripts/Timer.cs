@@ -20,7 +20,14 @@ public class Timer : MonoBehaviour
         if (timeValue > 0)
             timeValue -= Time.deltaTime;
         else
+        {
             timeValue = 0;
+            PlayerMovement.alive = false;
+            // restart the game
+            GroundSpawner.spawn = false;
+
+            Invoke("Restart", 2);
+        }
 
         DisplayTime(timeValue);
     }
@@ -34,5 +41,9 @@ public class Timer : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+    void Restart()
+    {
+        PlayerMovement.Restart();
     }
 }

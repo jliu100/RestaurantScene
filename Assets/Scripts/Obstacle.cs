@@ -22,7 +22,7 @@ public class Obstacle : MonoBehaviour
            
             PlayerMovement.alive = false;
             GroundSpawner.spawn = false;
-      
+            Destroy(gameObject);
 
             Invoke("Restart", 2);
         }
