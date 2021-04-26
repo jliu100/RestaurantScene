@@ -9,13 +9,13 @@ public class VRLookWalk : MonoBehaviour
     public float toggleAngle = 30.0f;
     public float speed = 3.0f;
     public bool moveForward;
+    private bool wasJump;
 
 
     [SerializeField] public Rigidbody rb;
     private CharacterController cc;
 
     [SerializeField] LayerMask groundMask;
-    [SerializeField] float jumpForce = 400f;
 
     // Use this for initialization
     void Start()
@@ -28,7 +28,11 @@ public class VRLookWalk : MonoBehaviour
     {
 
 
-        
+        if (PlayerMovement.alive == false)
+        {
+            speed = 0;
+            return;
+        }
         if (rb.position.x > 4.0f && vrCamera.eulerAngles.y < 100.0f && vrCamera.eulerAngles.y > 0.0f)
         {
             Debug.Log("out");
@@ -38,23 +42,18 @@ public class VRLookWalk : MonoBehaviour
             Debug.Log("out");
             moveForward = false;
         }
-        //else if (vrCamera.eulerAngles.y >= -10.0f && vrCamera.eulerAngles.y < 10.0f)
-        //{
-          //  moveForward = true;
-        //}
+       
         else
         {
             moveForward = true;
         }
 
-
-        if (vrCamera.eulerAngles.x < 340 && vrCamera.eulerAngles.x > 330)
+        if (vrCamera.eulerAngles.x < 350 && vrCamera.eulerAngles.x > 340)
         {
-            Jump();
-            
+            wasJump = true;
         }
-
-        if (moveForward)
+          
+         if (moveForward)
         {
             Vector3 forward = vrCamera.TransformDirection(Vector3.forward);
             cc.SimpleMove(forward * speed);
@@ -78,6 +77,18 @@ public class VRLookWalk : MonoBehaviour
       
         cc.Move(Vector3.up * 0.5f);
 
+
+
+    }
+
+    private void FixedUpdate()
+    {
+
+        if (wasJump)
+        {
+            Jump();
+            wasJump = false;
+        }
 
 
     }

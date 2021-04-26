@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
         {
             endGame.SetActive(true);
             totalScore.text = "Your Score: " + score;
+            scoreText.text = "";
 
         }
     }

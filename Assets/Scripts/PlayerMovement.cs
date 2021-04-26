@@ -35,7 +35,11 @@ public class PlayerMovement : MonoBehaviour
     
     private void Update()  
     {
-        
+        if (alive == false)
+        {
+            speed = 0;
+            return;
+        }
         horizontalInput = Input.GetAxis("Horizontal");       //2d. get the horizontal input
 
         if (Input.GetKeyDown(KeyCode.Space))
