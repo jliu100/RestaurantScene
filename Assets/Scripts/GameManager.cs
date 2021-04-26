@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerMovement.alive == false && Timer.timeValue == 0 && score >= 10)
+        if (PlayerMovement.alive == false && Timer.timeValue == 0 && score >= 15)
         {
             endGame.SetActive(true);
             endGame.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(false);
