@@ -119,7 +119,7 @@ public class GroundTile : MonoBehaviour
 
     Vector3 GetRandomPointInCollider(Collider collider)
     {
-        Debug.Log(collider.bounds.min.x);
+       
         Vector3 point = new Vector3(
             Random.Range(collider.bounds.min.x, collider.bounds.max.x),
             Random.Range(collider.bounds.min.y, collider.bounds.max.y),

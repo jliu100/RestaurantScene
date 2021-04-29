@@ -35,11 +35,11 @@ public class VRLookWalk : MonoBehaviour
         }
         if (rb.position.x > 4.0f && vrCamera.eulerAngles.y < 100.0f && vrCamera.eulerAngles.y > 0.0f)
         {
-            Debug.Log("out");
+         
             moveForward = false;
         }else if (rb.position.x < -4.0f  && vrCamera.eulerAngles.y < 360.0f && vrCamera.eulerAngles.y > 300.0f)
         {
-            Debug.Log("out");
+         
             moveForward = false;
         }
        

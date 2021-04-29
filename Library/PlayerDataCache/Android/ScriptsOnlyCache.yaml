@@ -64,7 +64,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -81,11 +85,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11856}
     - Class: 114
+      Script: {instanceID: 12164}
+    - Class: 114
       Script: {instanceID: 12478}
     - Class: 114
       Script: {instanceID: 12538}
     - Class: 114
+      Script: {instanceID: 12894}
+    - Class: 114
+      Script: {instanceID: 12908}
+    - Class: 114
       Script: {instanceID: 13182}
+    - Class: 114
+      Script: {instanceID: 13418}
     - Class: 114
       Script: {instanceID: 13432}
     - Class: 114
@@ -95,7 +107,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13688}
     - Class: 114
-      Script: {instanceID: 21366}
+      Script: {instanceID: 17454}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -116,7 +128,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/SampleScene.unity:
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
+    Assets/Scenes/RestaurantScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -134,8 +152,6 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
@@ -172,15 +188,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12126}
     - Class: 114
-      Script: {instanceID: 12164}
-    - Class: 114
       Script: {instanceID: 12250}
     - Class: 114
       Script: {instanceID: 12842}
     - Class: 114
       Script: {instanceID: 12894}
-    - Class: 114
-      Script: {instanceID: 12908}
     - Class: 114
       Script: {instanceID: 13012}
     - Class: 114
@@ -197,8 +209,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13342}
     - Class: 114
       Script: {instanceID: 13398}
-    - Class: 114
-      Script: {instanceID: 13418}
     - Class: 114
       Script: {instanceID: 13432}
     - Class: 114
@@ -230,12 +240,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 241
-      Script: {instanceID: 0}
-    - Class: 243
-      Script: {instanceID: 0}
-    - Class: 245
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
@@ -1106,6 +1110,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/MenuScene.unity
+  - Assets/Scenes/RestaurantScene.unity
   playerPath: C:/Users/liu10/Downloads/build.apk

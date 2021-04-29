@@ -29,7 +29,7 @@ public class Coin : MonoBehaviour
         // Add the player's score
 
         bool correct = false;
-        Debug.Log(transform.gameObject.name);
+     
 
         if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.activeSelf && (transform.gameObject.name == "Rotten_cheese(Clone)" || transform.gameObject.name == "Rotten_Meat(Clone)" || transform.gameObject.name == "TomatoHead_169_Tris_(Clone)"))
         {
