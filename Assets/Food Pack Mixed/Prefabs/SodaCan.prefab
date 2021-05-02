@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1414292103272000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4882997459383572}
+  - component: {fileID: 95344712446959336}
+  m_Layer: 0
+  m_Name: SodaCan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4882997459383572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414292103272000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -39.37, y: 5.9435883, z: -49.4702}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4387172043172604}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95344712446959336
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414292103272000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 5e6b2dd74fe53544f9e1b74530bdaa62, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &6146915543158218827
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4882997459383572}
+    m_Modifications:
+    - target: {fileID: 6143381592715184823, guid: c138ea2ce26796c4cac1ae9922b95880,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143381592715184823, guid: c138ea2ce26796c4cac1ae9922b95880,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.78334427
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143381592715184823, guid: c138ea2ce26796c4cac1ae9922b95880,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0061502457
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143381592715184823, guid: c138ea2ce26796c4cac1ae9922b95880,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0028190613
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143381592715184823, guid: c138ea2ce26796c4cac1ae9922b95880,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143381592715184823, guid: c138ea2ce26796c4cac1ae9922b95880,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143381592715184823, guid: c138ea2ce26796c4cac1ae9922b95880,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143381592715184823, guid: c138ea2ce26796c4cac1ae9922b95880,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143381592715184823, guid: c138ea2ce26796c4cac1ae9922b95880,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143381592715184823, guid: c138ea2ce26796c4cac1ae9922b95880,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143381592715184823, guid: c138ea2ce26796c4cac1ae9922b95880,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145436979875696875, guid: c138ea2ce26796c4cac1ae9922b95880,
+        type: 3}
+      propertyPath: m_Name
+      value: SodaCan_Mid__600_Tris_
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c138ea2ce26796c4cac1ae9922b95880, type: 3}
+--- !u!4 &4387172043172604 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6143381592715184823, guid: c138ea2ce26796c4cac1ae9922b95880,
+    type: 3}
+  m_PrefabInstance: {fileID: 6146915543158218827}
+  m_PrefabAsset: {fileID: 0}

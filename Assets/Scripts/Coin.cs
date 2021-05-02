@@ -9,6 +9,9 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //if (PlayerMovement.alive == false)
+         //   return;
+
         if(other.gameObject.GetComponent<Obstacle>() != null)        //To fix some coin spawn inside the obstacles
         {
             Destroy(gameObject);
@@ -21,12 +24,59 @@ public class Coin : MonoBehaviour
             return;
         }
 
+       
+
         // Add the player's score
 
-        GameManager.inst.IncreaseScore();
+        bool correct = false;
+        Debug.Log(transform.gameObject.name);
+
+        if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.activeSelf && (transform.gameObject.name == "Rotten_cheese(Clone)" || transform.gameObject.name == "Rotten_Meat(Clone)" || transform.gameObject.name == "TomatoHead_169_Tris_(Clone)"))
+        {
+            correct = true;
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject.activeSelf && (transform.gameObject.name == "CerealBox_Mid__400_Tris_(Clone)" || transform.gameObject.name == "CarboardBox_1(Clone)"))
+        {
+            correct = true;
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.activeSelf && (transform.gameObject.name == "Plastic Spoon(Clone)" || transform.gameObject.name == "Plastic Spork(Clone)" || transform.gameObject.name == "Plate3(Clone)"))
+        {
+            correct = true;
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.transform.GetChild(3).gameObject.activeSelf && (transform.gameObject.name == "KnifeKitchen(Clone)" || transform.gameObject.name == "Pan(Clone)" || transform.gameObject.name == "EnergyDrink_Mid__226_Tris_(Clone)" || transform.gameObject.name == "Glass(Clone)"  || transform.gameObject.name == "BeerBottle_Mid__620_Tris_(Clone)")  )
+        {
+            correct = true;
+            Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        //-------------------------
+
+
+       
+
+        if (correct == true)
+        {
+            GameManager.inst.IncreaseScore();
+            SoundManager.PlaySound("good");
+        }
+        else
+        {
+            GameManager.inst.DecreaseScore();
+            SoundManager.PlaySound("bad");
+        }
+
 
         // Destory the coin
-        Destroy(gameObject);
+        
+
+
+
 
     }
     // Start is called before the first frame update
@@ -38,6 +88,7 @@ public class Coin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);  // coin will always rotate 90 degrees every second regardless of framerate
+        //transform.Rotate(0,  rotateSpeed * Time.deltaTime,0);  // coin will always rotate 90 degrees every second regardless of framerate
+       
     }
 }

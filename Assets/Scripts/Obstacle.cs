@@ -7,17 +7,24 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     PlayerMovement playerMovement;
+
     // Start is called before the first frame update
     void Start()
     {
         playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
+       
     }
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.name == "Player")
         {
             //kill player
-            playerMovement.Die();
+           
+            PlayerMovement.alive = false;
+            GroundSpawner.spawn = false;
+            Destroy(gameObject);
+
+            Invoke("Restart", 2);
         }
         
     }
@@ -26,5 +33,9 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         
+    }
+    void Restart()
+    {
+        PlayerMovement.Restart();
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    bool alive = true;
+    public static bool alive = true;
     
     public float speed = 5;
     [SerializeField] public Rigidbody rb;
@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
 
 
     public float speedIncreasePerPoint = 0.1f;
+
+    [SerializeField] float jumpForce = 400f;
+    [SerializeField] LayerMask groundMask;
 
     
     //1a. FixUpdate is build in function: runs fix interval known as fixedDeltaTime, default time is 50 times/second
@@ -32,25 +35,53 @@ public class PlayerMovement : MonoBehaviour
     
     private void Update()  
     {
-        
+        if (alive == false)
+        {
+            speed = 0;
+            return;
+        }
         horizontalInput = Input.GetAxis("Horizontal");       //2d. get the horizontal input
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
 
         //If palyer's verticle position (not on tile) is less than negative 5, kill palyer
         if (transform.position.y < -5)
         {
-            Die();     
+           Die();     
         }
+           
     }
 
     public void Die()
     {
         alive = false;
         // restart the game
+        
+
         Invoke("Restart", 2);
     }
 
-    void Restart()
+     public static void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+       
+        SceneManager.LoadScene("MenuScene");
+        GameManager.score = 0;
+        alive = true;
+        Timer.timeValue = 90;
+    }
+
+    void Jump()
+    {
+        // Check whether we are currently grounded
+        float height = GetComponent<Collider>().bounds.size.y;
+        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
+
+        //If we are jump
+        rb.AddForce(Vector3.up * jumpForce);
+
+
     }
 }
