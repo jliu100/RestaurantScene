@@ -717,10 +717,10 @@ GameObject:
   - component: {fileID: 580492648}
   - component: {fileID: 580492647}
   - component: {fileID: 580492646}
-  - component: {fileID: 580492645}
   - component: {fileID: 580492644}
+  - component: {fileID: 580492645}
   m_Layer: 5
-  m_Name: ResturantScene
+  m_Name: Resturant Scene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -813,7 +813,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: RestaurantScene
+          m_StringArgument: SampleScene
           m_BoolArgument: 0
         m_CallState: 2
   gvrTimer: 0
@@ -1405,8 +1405,8 @@ MonoBehaviour:
   GVRClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 979682658}
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1511,7 +1511,6 @@ GameObject:
   - component: {fileID: 1445245390}
   - component: {fileID: 1445245389}
   - component: {fileID: 1445245388}
-  - component: {fileID: 1445245393}
   m_Layer: 5
   m_Name: Scene (1)
   m_TagString: Untagged
@@ -1556,7 +1555,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1445245393}
+        - m_Target: {fileID: 1445245389}
           m_MethodName: Enter
           m_Mode: 1
           m_Arguments:
@@ -1571,7 +1570,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1445245393}
+        - m_Target: {fileID: 1445245389}
           m_MethodName: Exit
           m_Mode: 1
           m_Arguments:
@@ -1674,34 +1673,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445245386}
   m_CullTransparentMesh: 0
---- !u!114 &1445245393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445245386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ea54fa73fec48d41b13574c1039861c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gazeTime: 2
-  GVRClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 979682658}
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  gvrTimer: 0
 --- !u!1 &1783654226
 GameObject:
   m_ObjectHideFlags: 0
