@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static int score;
-   
+
     public static GameManager inst;
     [SerializeField] Text scoreText;
     [SerializeField] PlayerMovement playerMovement;
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseScore()
     {
         score++;
-        scoreText.text = "Score: "+ score;
+        scoreText.text = "Score: " + score;
 
         //increase player's speed
         //playerMovement.speed += playerMovement.speedIncreasePerPoint;
@@ -30,22 +30,22 @@ public class GameManager : MonoBehaviour
     {
         score--;
         scoreText.text = "Score: " + score;
-        
+
     }
-   
-   
-    
+
+
+
     //This start before anything event start of game
     private void Awake()
     {
         inst = this;
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
-         
-   
+
+
     }
 
     // Update is called once per frame
@@ -56,12 +56,12 @@ public class GameManager : MonoBehaviour
             endGame.SetActive(true);
             endGame.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(false);
             endGame.gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.SetActive(true);
-            winGame.SetActive(false);
+            winGame.SetActive(true);
             totalScore.text = "Your Score: " + score;
             scoreText.text = "";
             Invoke("Restart", 2);
         }
-       else if(PlayerMovement.alive == false)
+        else if (PlayerMovement.alive == false)
         {
             endGame.SetActive(true);
             winGame.SetActive(false);
@@ -78,5 +78,5 @@ public class GameManager : MonoBehaviour
         PlayerMovement.Restart();
     }
 
-   
+
 }
